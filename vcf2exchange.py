@@ -4,6 +4,7 @@ import vobject
 from pathlib import Path
 from datetime import datetime
 
+# headers from https://support.microsoft.com/en-us/office/create-or-edit-csv-files-to-import-into-outlook-4518d70d-8fe9-46ad-94fa-1494247193c7
 
 CSV_HEADERS = [  # EXACT Microsoft order
     "Title","First Name","Middle Name","Last Name","Suffix","Company","Department",
