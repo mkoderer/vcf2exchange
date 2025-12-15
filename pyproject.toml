@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "vcf-to-exchange-csv"
+version = "1.0.0"
+description = "Convert vCard (VCF) contact files into Microsoft Exchange / Outlook-compatible CSV"
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT" }
+authors = [
+    { name = "Your Name", email = "you@example.com" }
+]
+
+dependencies = [
+    "vobject>=0.9.6"
+]
+
+[project.scripts]
+vcf-to-exchange = "vcf_to_exchange_csv:main"
+
