@@ -14,7 +14,8 @@ authors = [
 ]
 
 dependencies = [
-    "vobject>=0.9.6"
+    "ics>=0.7.2",
+    "vobject>=0.9.6",
 ]
 
 [project.scripts]
