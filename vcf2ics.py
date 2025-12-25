@@ -101,15 +101,23 @@ def main():
 
                 event = Event()
                 event.add("uid", make_uid(name, birthday))
-                event.add("summary", name)
-                event.add("description", f"Birthday: {birthday.isoformat()}")
+                event.add("summary", f"Geburtstag: {name}")
+                event.add("description", f"Gebrutstag von {name} am {birthday.isoformat()}")
 
                 # All-day event (DATE, not DATE-TIME)
                 event.add("dtstart", event_date)
                 event.add("dtend", event_date + timedelta(days=1))
 
                 # Yearly recurrence
-                event.add("rrule", {"freq": "yearly"})
+                event.add(
+                "rrule",
+                    {
+                        "freq": "yearly",
+                        "interval": 1,
+                        "bymonth": birthday.month,
+                        "bymonthday": birthday.day,
+                    },
+                )
 
                 # Alarm at local time with TZID
                 alarm = Alarm()
